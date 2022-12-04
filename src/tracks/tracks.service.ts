@@ -47,7 +47,6 @@ export class TracksService {
 
 
         const albums = this.getUniqueAlbums(songs);
-
         // TEST Cache
         // await new Promise(resolve => { setTimeout(() => { resolve(true) }, 3000)})
         
@@ -143,8 +142,8 @@ export class TracksService {
                 preview_url:    song.previewUrl,
                 fecha_lanzamiento: moment(song.releaseDate).format('YYYY-MM-DD'),
                 precio: {
-                  moneda: song.currency,
-                  valor:  song.collectionPrice.toString(),
+                  moneda: song.currency || '0',
+                  valor:  song.collectionPrice && song.collectionPrice.toString() || '',
                 },
             }
         })
