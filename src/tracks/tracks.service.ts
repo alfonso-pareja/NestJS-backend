@@ -1,14 +1,14 @@
 import { Injectable } from '@nestjs/common';
-import { MediaType, QueryTracksDTO } from './dto/track.dto';
-import { IResponse, ISong } from './interfaces/tracks.interface';
 import { HttpService } from '@nestjs/axios';
+import { firstValueFrom } from 'rxjs';
+import { IResponse, ISong } from './interfaces/tracks.interface';
 import { IApiResponse, IApiResult } from './interfaces/itunes.interface';
+import { IMemory } from '../common/interfaces/memory-storage.interface';
+import { MemoryStorage } from '../common/memory-storage';
+import { MediaType } from './dto/track.dto';
+import { FavoriteSongs } from './dto/favorite.dto';
 import { iTunes } from './class/itunes.class';
 import * as moment from 'moment';
-import { firstValueFrom } from 'rxjs';
-import { MemoryStorage } from 'src/common/memory-storage';
-import { FavoriteSongs } from './dto/favorite.dto';
-import { IMemory } from 'src/common/interfaces/memory-storage.interface';
 
 @Injectable()
 export class TracksService {
@@ -124,7 +124,7 @@ export class TracksService {
      */
     async getFavorites(): Promise<IResponse>{
         const favorites: IMemory = this.memo.getMemoryByKey('favorites');
-        return { status: true, message: 'OK', data: favorites }
+        return { status: true, message: 'OK', data: favorites && favorites.value || null }
     }
 
 

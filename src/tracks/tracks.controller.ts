@@ -1,7 +1,16 @@
-import { CacheInterceptor, Body, CacheKey, Controller, Get, Post, Query, UseInterceptors } from '@nestjs/common';
+import { 
+    CacheInterceptor, 
+    Body,
+    CacheKey, 
+    Controller, 
+    Get, 
+    Post, 
+    Query, 
+    UseInterceptors 
+} from '@nestjs/common';
 import { FavoriteSongs } from './dto/favorite.dto';
 import { QueryTracksDTO } from './dto/track.dto';
-import { IResponse, ITrackResponse } from './interfaces/tracks.interface';
+import { IResponse } from './interfaces/tracks.interface';
 import { TracksService } from './tracks.service';
 
 @Controller('api')

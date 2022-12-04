@@ -32,6 +32,7 @@ import {
     
       response.status(statusCode).json({
         code: statusCode,
+        status: false,
         message,
         data: [],
         errors: _exception,
