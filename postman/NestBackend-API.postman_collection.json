@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "23fd43d2-99cc-439b-a4a5-7392f0e351f0",
+		"name": "NestBackend - API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Buscar canciones por banda",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/search_tracks?limit=5&term=Metallica&media=music",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"search_tracks"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": "term",
+							"value": "Metallica"
+						},
+						{
+							"key": "media",
+							"value": "music"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar a Favoritos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre_banda\": \"Pearl Jam\",\n    \"cancion_id\": 158049842,\n    \"usuario\": \"Alfonso\",\n    \"ranking\": \"5/5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/favorites",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Favoritos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/favorites",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -64,17 +64,6 @@ describe('TracksService.getTrackByTerm', () => {
             }
           },
           {
-            "cancion_id": 158049842,
-            "nombre_album": "Rearviewmirror: Greatest Hits 1991-2003",
-            "nombre_tema": "Even Flow",
-            "preview_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/69/c5/d0/69c5d013-7338-b1e8-1aa7-e9c1cf365e83/mzaf_6081655695052355680.plus.aac.p.m4a",
-            "fecha_lanzamiento": "1991-08-27",
-            "precio": {
-              "moneda": "USD",
-              "valor": "14.99"
-            }
-          },
-          {
             "cancion_id": 425465351,
             "nombre_album": "Ten",
             "nombre_tema": "Black",
@@ -83,6 +72,17 @@ describe('TracksService.getTrackByTerm', () => {
             "precio": {
               "moneda": "USD",
               "valor": "9.99"
+            }
+          },
+          {
+            "cancion_id": 158049842,
+            "nombre_album": "Rearviewmirror: Greatest Hits 1991-2003",
+            "nombre_tema": "Even Flow",
+            "preview_url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/69/c5/d0/69c5d013-7338-b1e8-1aa7-e9c1cf365e83/mzaf_6081655695052355680.plus.aac.p.m4a",
+            "fecha_lanzamiento": "1991-08-27",
+            "precio": {
+              "moneda": "USD",
+              "valor": "14.99"
             }
           },
           {
@@ -125,7 +125,7 @@ describe('TracksService.getTrackByTerm', () => {
   it('should find all favorites songs', async () => {
     const expectResult = {
       "status": true,
-      "message": "OK",
+      "message": "Favoritos",
       "data": [
           {
               "nombre_banda": "Pearl Jam",

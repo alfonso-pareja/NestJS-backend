@@ -113,7 +113,7 @@ export class TracksService {
         // Se agrega a los favoritos
         favorite.value.push(favoriteSong)
         
-        return { status: true, message: 'OK', data: null }
+        return { status: true, message: 'Agregado a favoritos', data: null }
     }
 
 
@@ -123,7 +123,7 @@ export class TracksService {
      */
     async getFavorites(): Promise<IResponse>{
         const favorites: IMemory = this.memo.getMemoryByKey('favorites');
-        return { status: true, message: 'OK', data: favorites && favorites.value || null }
+        return { status: true, message: 'Favoritos', data: favorites && favorites.value || null }
     }
 
 
