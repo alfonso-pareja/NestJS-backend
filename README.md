@@ -1,8 +1,6 @@
 
 # Musical Bands Finder 
 
-Proyecto desarrollado como prueba tecnica para yapo, el cual cuenta de 2 partes (frontend y backend), siendo esta el entregable de backend, construido con NestJs (node).
-
 
 ### Dependencias
 <sub>Las siguientes dependencias fueron utilizadas en este proyecto</sub>
